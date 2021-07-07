@@ -19,9 +19,9 @@ const puppeteer = require('puppeteer');
     textToType = await page.$eval('#gwt-uid-20 > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(1) > td > table > tbody > tr:nth-child(1) > td', (el) => el.innerText);
 
     console.log(textToType);
+    console.log('here!');
 
     await page.waitForSelector('[title="Time remaining"]', { visible: true });
-    // await new Promise(r => setTimeout(r, 5000));
 
     await page.type('#gwt-uid-20 > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(2) > td > input', textToType, { delay: 1 });
 })()
