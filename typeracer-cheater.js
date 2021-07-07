@@ -12,9 +12,9 @@ const puppeteer = require('puppeteer');
     const { page, browser } = await connectBrowser();
     await page.goto('https://play.typeracer.com/', { waitUntil: 'load' });
 
-    await page.waitForSelector('#gwt-uid-2 > a');
+    await page.waitForSelector('#gwt-uid-1 > a');
 
-    await page.click('#gwt-uid-2 > a');
+    await page.click('#gwt-uid-1 > a');
 
     textToType = await page.$eval('#gwt-uid-20 > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(1) > td > table > tbody > tr:nth-child(1) > td', (el) => el.innerText);
 
