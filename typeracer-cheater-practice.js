@@ -9,7 +9,7 @@ const puppeteer = require('puppeteer');
         return { page, pages, browser };
     }
 
-    const { page, browser } = await connectBrowser();
+    const { page } = await connectBrowser();
     await page.goto('https://play.typeracer.com/', { waitUntil: 'load' });
 
     await page.waitForSelector('#gwt-uid-2 > a');
