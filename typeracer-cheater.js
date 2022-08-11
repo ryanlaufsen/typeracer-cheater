@@ -15,6 +15,8 @@ const puppeteer = require('puppeteer');
     await page.waitForSelector('#gwt-uid-1 > a');
     await page.click('#gwt-uid-1 > a');
 
+    await page.waitForSelector('#gwt-uid-20');
+
     const textToType = await page.$eval('#gwt-uid-20 > table > tbody > tr:nth-child(2) > td > table > tbody > tr:nth-child(1) > td > table > tbody > tr:nth-child(1) > td', (el) => el.innerText);
     console.log(textToType);
 
