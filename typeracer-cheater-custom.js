@@ -18,7 +18,7 @@ const puppeteer = require('puppeteer');
     await page.waitForSelector('.urlTextbox-readonly');
 
     const inviteLink = await page.evaluate(() => {
-        return decodeURIComponent(document.querySelectorAll('.ImageButtonWithText a')[4].href).match(/https:\/\/play.typeracer\.com\?rt=\w+$/)[0];
+        return decodeURIComponent(document.querySelectorAll('.ImageButtonWithText a')[3].href).match(/https:\/\/play.typeracer\.com\?rt=\w+$/)[0];
     });
     console.log(inviteLink);
 
